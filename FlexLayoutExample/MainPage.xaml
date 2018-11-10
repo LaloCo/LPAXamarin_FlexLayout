@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FlexLayoutExample"
+             x:Class="FlexLayoutExample.MainPage">
+    
+    <ContentPage.Resources>
+        <Style TargetType="Frame">
+            <Setter Property="WidthRequest" Value="300"/>
+            <Setter Property="HeightRequest" Value="500"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="CornerRadius" Value="20"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ScrollView Orientation="Both">
+        <FlexLayout Direction="Column">
+            <Frame BackgroundColor="#A2C2B2">
+                <FlexLayout Direction="Column"
+                            JustifyContent="SpaceEvenly">
+                    <Label Text="Basic Subscription"
+                           TextColor="White"
+                           FontSize="25"
+                           FontAttributes="Bold"/>
+                    <Label Text="Get basic access to this app for free (ads may be displayed)."
+                           TextColor="White"/>
+                    <Button Text="Select Subscription"
+                            BackgroundColor="White"
+                            TextColor="Black"/>
+                </FlexLayout>
+            </Frame>
+            <Frame BackgroundColor="#CDB579">
+                <FlexLayout Direction="Column"
+                            JustifyContent="SpaceEvenly">
+                    <Label Text="Gold Subscription"
+                           TextColor="White"
+                           FontSize="25"
+                           FontAttributes="Bold"/>
+                    <Label Text="Get full access to this app for $9.99 a month (no ads)."
+                           TextColor="White"/>
+                    <Button Text="Select Subscription"
+                            BackgroundColor="White"
+                            TextColor="Black"/>
+                </FlexLayout>
+            </Frame>
+            <Frame BackgroundColor="#AAB0B4">
+                <FlexLayout Direction="Column"
+                            JustifyContent="SpaceEvenly">
+                    <Label Text="Platinum Subscription"
+                           TextColor="White"
+                           FontSize="25"
+                           FontAttributes="Bold"/>
+                    <Label Text="Get full access to this app plus tailored and personal support for $19.99 a month (no ads)."
+                           TextColor="White"/>
+                    <Button Text="Select Subscription"
+                            BackgroundColor="White"
+                            TextColor="Black"/>
+                </FlexLayout>
+            </Frame>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>
